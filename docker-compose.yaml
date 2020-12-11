@@ -1,0 +1,13 @@
+version: "3.0"
+
+services:
+    chrome:
+      build:
+        context: .
+      container_name: chrome-ubuntu
+      ports: 
+        - 5900:5900
+      privileged: true
+      user: apps
+      environment: 
+        - VNC_SERVER_PASSWORD=1234
